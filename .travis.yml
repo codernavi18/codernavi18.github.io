@@ -7,3 +7,5 @@ before_script:
     - bash setup.sh
 script:
     - bash job.sh
+after_success:
+    - bash postsuccess.sh
