@@ -14,6 +14,7 @@ class AtcoderSpider(scrapy.Spider):
         items = AtcoderItem()
         items['rank'] = response.xpath('//th[text()="Rank"]/following-sibling::td/text()').get()
         if items['rank'] is None:
+            items['rank'] = "0"
             items['rating'] = "0"
             items['best_rating'] = "0"
             items['contests_participated'] = "0"
