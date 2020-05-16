@@ -1,0 +1,6 @@
+language: bash
+
+before_script:
+    - bash setup.sh
+script:
+    - bash job.sh
