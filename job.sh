@@ -16,10 +16,15 @@ mv leetcode.json.tmp leetcode.json
 mv atcoder.json.tmp atcoder.json
 mv uva.json.tmp uva.json
 
-git config user.email "travis@travis-ci.org"
-git config user.name "Travis CI"
+echo "Done with all the scraping"
+ls
+
+git config --global user.email "travis@travis-ci.org"
+git config --global user.name "Travis CI"
+git checkout master
 git add .
 git commit -m "Travis build : $TRAVIS_BUILD_NUMBER [$(date)]"
-git remote add origin-pages https://${GH_TOKEN}@github.com/codernavi18/codernavi18.github.io.git > /dev/null 2>&1
-git push --quiet --set-upstream origin-pages master
+git remote rm origin
+git remote add origin https://codernavi18:${GH_TOKEN}@github.com/codernavi18/codernavi18.github.io.git > /dev/null 2>&1
+git push origin master --quiet
 exit 0
