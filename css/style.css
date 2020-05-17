@@ -364,20 +364,6 @@ canvas{
 
 
 /*-------- 7. Card area starts ----------*/
-
-#rankings{
-    
-}
-
-/*#rankings {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-}*/
-
-
-
 .card {
   width: 450px;
   height: 250px;
@@ -399,14 +385,24 @@ canvas{
   position: absolute;
   width: 150px;
   height: 100%;
-  background: linear-gradient(#dE685E, #EE786E);
+  background: linear-gradient(#339d83, #2b826d);
   transition: width 0.4s;
   overflow: hidden;
   z-index: 2;
 }
 
 .card.green .additional {
-  background: linear-gradient(#92bCa6, #A2CCB6);
+  background: linear-gradient(#057078, #055f66);
+}
+
+.card.orange .additional {
+  background: linear-gradient(#e34821,#e85733);
+}
+.card.dark .additional {
+  background: linear-gradient(#636667,#777b7c);
+}
+.card.blue .additional {
+  background: linear-gradient(#02abe4,#00d4ff);
 }
 
 
@@ -445,8 +441,17 @@ canvas{
   white-space: nowrap;
 }
 
+.card .additional .user-card .level{
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
 .card .additional .user-card .points {
-  top: 85%;
+    top: 85%;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
 }
 
 .card .additional .user-card svg {
@@ -467,7 +472,7 @@ canvas{
 }
 
 .card.green .additional .more-info h1 {
-  color: #224C36;
+  /*color: #224C36;*/
 }
 
 .card .additional .coords {
@@ -477,7 +482,7 @@ canvas{
 }
 
 .card.green .additional .coords {
-  color: #325C46;
+  /*color: #325C46;*/
 }
 
 .card .additional .coords span + span {
@@ -496,7 +501,7 @@ canvas{
 }
 
 .card.green .additional .stats {
-  color: #325C46;
+  /*color: #325C46;*/
 }
 
 .card .additional .stats > div {
