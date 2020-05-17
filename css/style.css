@@ -366,6 +366,14 @@ canvas{
 
 
 /*-------- Card area starts ----------*/
+.container{
+  display: block;
+}
+
+#update-stats{
+  text-align: center;
+}
+
 .card {
   width: 450px;
   height: 250px;
