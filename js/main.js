@@ -103,14 +103,15 @@ $(document).ready(function () {
 	/**
 	 * Reading JSON files and update cards
 	 */
+	$("#last-updated").text(formatDate(Date.now()))
 	updateCards();
 
 
 });
 
 function updateCards() {
-	Object.keys(CARD_JSON_FILES).forEach(item => {
-		var payload = CARD_JSON_FILES[item];
+	Object.keys(CARD_JSON_FILES).forEach(key => {
+		var payload = CARD_JSON_FILES[key];
 		readJSONFFile(payload['file'], (data) => {
 			let block = $(`#${payload['block-identifier']}`)
 			let sections = payload['sections']
@@ -120,13 +121,17 @@ function updateCards() {
 				let jsonFieldName = splitArr[0];
 				let foundItems = $(block).find(`.${htmlFieldName}`);
 				foundItems.each((index, item) => {
-					if (jsonFieldName === 'last_activity' && typeof data[jsonFieldName] != undefined && data[jsonFieldName] != 0) {
-						if (isNaN(data[jsonFieldName])) {
+					if (jsonFieldName === 'last_activity' && typeof data[jsonFieldName] != undefined) {
+						if (key === 'codeforces') {
+							data[jsonFieldName] = data[jsonFieldName] * 1000;
+						}
+						if (data[jsonFieldName] == 0) {
+							$(item).text("N/A");
+						} else if (isNaN(data[jsonFieldName])) {
 							$(item).text((data[jsonFieldName]));
 						} else {
 							$(item).text(formatDate(data[jsonFieldName]));
 						}
-
 					} else {
 						$(item).text(data[jsonFieldName]);
 					}
