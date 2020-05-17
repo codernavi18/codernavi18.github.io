@@ -9,7 +9,7 @@
 
 
 
-/*--- 1. Default css starts ---*/
+/*--- Default css starts ---*/
 
 html,body{
     height: 100%;
@@ -90,7 +90,7 @@ img {
 
 /*--- Default css ends---*/
 
-/*-------------- 2. Preloader css starts ---------------*/
+/*-------------- Preloader css starts ---------------*/
 
 .loader_bg {
     position: fixed;
@@ -141,7 +141,7 @@ img {
 
 /*---------- preloader css ends -------------*/
 
-/*--- 3. Mouse animation starts---*/
+/*--- Mouse animation starts---*/
 
 @-webkit-keyframes scroll-ani {
     0% {
@@ -223,11 +223,11 @@ img {
 
 /*---mouse animation ends---*/
 
-/*----------- 5. Banner area css starts--------------*/
+/*----------- Banner area css starts--------------*/
 
 
 .banner-area{
-    background-image: url(../images/2.jpg); /*--edit image--*/
+    background-image: url(../images/2.jpg);
     background-position: center;
     background-size:cover;
     position: relative;
@@ -365,7 +365,7 @@ canvas{
 }
 
 
-/*-------- 7. Card area starts ----------*/
+/*-------- Card area starts ----------*/
 .card {
   width: 450px;
   height: 250px;

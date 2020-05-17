@@ -3,9 +3,9 @@ $(document).ready(function () {
 
     //********* page loader js
 
-    // setTimeout(function () {
-    //     $('.loader_bg').fadeToggle();
-    // }, 1500);
+    setTimeout(function () {
+        $('.loader_bg').fadeToggle();
+    }, 1500);
 
 	//********** menu background color change while scroll
 
