@@ -360,7 +360,9 @@ canvas{
 }
 
 /*---------Banner area css ends--------------*/
-
+#headline {
+    margin-top:10%;
+}
 
 
 /*-------- 7. Card area starts ----------*/
@@ -402,7 +404,7 @@ canvas{
   background: linear-gradient(#636667,#777b7c);
 }
 .card.blue .additional {
-  background: linear-gradient(#02abe4,#00d4ff);
+  background: linear-gradient(#6c4a81,#533a63);
 }
 
 
@@ -480,6 +482,10 @@ canvas{
   color: #fff;
   font-size: 1rem;
 }
+.card .additional .coords a{
+  color: #ffffff;
+  text-decoration: underline;
+}
 
 .card.green .additional .coords {
   /*color: #325C46;*/
@@ -551,6 +557,11 @@ canvas{
     width:110px;
     height:110px;
     margin-top: 50%;
+}
+
+.card .additional .stats div.value.textrank {
+    line-height: 0.9rem;
+    font-size: 15px;
 }
 
 
