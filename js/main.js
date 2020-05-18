@@ -103,11 +103,20 @@ $(document).ready(function () {
 	/**
 	 * Reading JSON files and update cards
 	 */
-	$("#last-updated").text(formatDate(Date.now()))
+	readJSONFFile(CARD_JSON_FILES['codeforces']['file'], updateLastUpdate);
 	updateCards();
 
 
 });
+
+function updateLastUpdate(data) {
+	var last_updated = data['last_updated'];
+	if (last_updated) {
+		$("#last-updated").text(formatDate(last_updated * 1000));
+	} else {
+		$("#last-updated").text(formatDate(Date.now()))
+	}
+}
 
 function updateCards() {
 	Object.keys(CARD_JSON_FILES).forEach(key => {
