@@ -1,5 +1,8 @@
 #!/bin/bash
 #enter the scrapy directory
+
+set -e
+
 pushd rankings
 
 #run the spiders

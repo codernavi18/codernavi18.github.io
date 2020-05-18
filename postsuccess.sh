@@ -1,4 +1,7 @@
 #!/bin/bash
+
+set -e
+
 git status
 echo "github token is this : $GITHUB_TOKEN"
 
